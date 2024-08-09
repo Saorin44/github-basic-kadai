@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQueryUIアニメーション確認サンプル</title>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<style>
+#d1{
+  width:200px;
+  height:100px;
+  border:1px solid #808080;
+  background-color:#fffff0;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<script>
+$(function(){
+  //クリックイベント
+  $("#btn1").click(function(){
+    var str = $("#sel1").val();
+    $("#d1").toggle(str);
+  });
+});
+</script>
+</head>
+<body>
+  <select id="sel1">
+    <option value="blind">blind</option>
+    <option value="bounce">bounce</option>
+    <option value="clip">clip</option>
+    <option value="drop">drop</option>
+    <option value="explode">explode</option>
+    <option value="fade">fade</option>
+    <option value="fold">fold</option>
+    <option value="highlight">highlight</option>
+    <option value="puff">puff</option>
+    <option value="pulsate">pulsate</option>
+    <option value="scale">scale</option>
+    <option value="shake">shake</option>
+    <option value="size">size</option>
+    <option value="slide">slide</option>
+  </select>
+  <input type="button" id="btn1" value="アニメーション実行">
+  <div id="d1">ここがアニメーションします。</div>
+</body>
+</html>

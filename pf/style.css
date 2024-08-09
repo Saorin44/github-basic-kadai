@@ -1,0 +1,144 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #000;
+  color: #fff;
+}
+
+/*リンクの装飾*/
+nav a:link {color: #fff;}
+nav a:visited {color: #fff;}
+nav a:hover {color: #000;
+background-color: #fff;}
+nav a {text-decoration-line:none;}
+nav a:active {color: #fff;}
+
+nav a {
+  font-size: 4vw;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.top{
+  display: flex;
+  width: 100%;
+}
+
+.topimg{
+  width: 80%;
+}
+
+#MyProfile{
+  width: 100%;
+  height: 100%;
+}
+.menu{
+  width: 20%;
+  background-color: #000;
+  text-align: right;
+}
+
+
+p {
+  font-optical-sizing: auto;
+  font-size: 18px;
+}
+
+li {
+  font-optical-sizing: auto;
+  font-size: 18px;
+}
+
+h2 {
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-size: 35px;
+}
+
+h3 {
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 20px;
+}
+
+#a_w{
+  display: flex;
+  width: 100%;
+}
+
+
+.about {
+  text-align: center;
+  display: block;
+  margin: 50px 50px 50px 10px;
+  width: 40%;
+}
+
+.pro{
+  text-align: left;
+}
+
+.works {
+  text-align: center;
+  display: block;
+  margin: 50px 10px 50px 50px ;
+  width: 60%;
+}
+
+.workview{
+  display: flex;
+}
+
+.workview div{
+  width: 30%;
+  margin: 5px;
+}
+
+#contact{
+  margin: 25px;
+}
+
+  @media (max-width: 767px) {
+    #a_w{
+      display: block;
+      width: 100%;
+    }
+    .about {
+      margin: 10px;
+      width: 100%;
+    }
+    .works {
+      margin: 10px ;
+      width: 100%;
+    }
+    .pro{
+      margin: 0px 20% 0px 20%;
+    }
+
+  }
+
+.mail{
+  height: 40px;
+  width: 250px;
+  border-color: #fff;
+  border-width: 1px;
+  background-color: #000;
+  color: #fff;
+}
+.mail_c{
+  height: 200px;
+  width: 250px;
+  border-color: #fff;
+  border-radius: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+footer {
+  color: #fff;
+  background-color: dimgray;
+  text-align: center;
+}

@@ -1,0 +1,104 @@
+/* 頁全体の余白をなくす。フォントサイズ・字体をWebフォントで指定 */
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 1em;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;}
+
+h1 {text-align: center;margin: 100px auto 50px auto;font-size: 2em;}
+h2 {text-align: center;margin: 10px;}
+li {font-size: 1em;}
+/* －－－－－－－－－－－－－－ */
+
+/* ナビゲーションプロパティ */
+#navPc {
+  font-size: 2em;
+  font-weight: bolder;
+  margin: 5px auto 10px auto;
+  padding:  10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navP{
+  padding: 0px 20px;
+  border: 1px solid #000;
+}
+.navE{margin-left:auto;}
+
+/*リンクの装飾*/
+nav a {
+  text-decoration: n;
+  font-style: normal;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 5px;
+}
+nav a:link {color: #000;}
+nav a:visited {color: #000;}
+nav a:hover {color: #000;}
+nav a {text-decoration-line:none;}
+nav a:active {color: #000;}
+
+/* －－－－－－－－－－－－－－ */
+
+/* Aboutプロパティ */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutitem1 img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 3px solid rgb(62, 180, 161);
+  box-sizing: border-box;
+  padding: 3px;
+}
+.aboutitem2{margin: 10px;}
+
+/*画面サイズ767px以下*/
+@media (max-width: 767px) {
+  #about {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+/* －－－－－－－－－－－－－－ */
+
+/* Workプロパティ */
+#work {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.workitem {
+  margin: 10px;
+  text-align: center;
+  overflow-wrap: normal;
+  width: 33.3%;
+}
+.workitem img{width: 100%;}
+
+/*画面サイズ767px以下*/
+@media (max-width: 767px) {
+  #work {
+    display: grid;
+    justify-content: center;
+    margin: auto;
+  }
+  .workitem {width: 95%;margin-bottom: 50px;}
+}
+/* －－－－－－－－－－－－－－ */
+
+
