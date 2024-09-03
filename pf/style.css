@@ -8,19 +8,17 @@ body {
 }
 
 /*リンクの装飾*/
-nav a:link {color: #fff;}
-nav a:visited {color: #fff;}
-nav a:hover {color: #000;}
-nav a {text-decoration-line:none;}
-nav a:active {color: #fff;}
+a:link {color: #fff;}
+a:visited {color: #fff;}
+a {text-decoration-line:none;}
+a:active {color: #fff;}
+a:hover {color: #000;}
 
-nav a {
-  font-size: 4vw;
-  font-weight: bold;
-  margin: 5px;
+.menu {
+  width: 20%;
 }
 
-.menu-b {
+.menu-b,.c_f{
   text-align: right;
   background-color: #000;
   -webkit-transition: all 0.3s ease;
@@ -28,6 +26,11 @@ nav a {
   -o-transition: all 0.3s ease;
   transition: all  0.3s ease;
   }
+.menu-b p{
+  font-size: 4vw;
+  font-weight: bold;
+  margin: 0;
+}
 
 .menu-b:hover {
   background-color: #fff;
@@ -45,15 +48,8 @@ nav a {
   width: 100%;
   height: 100%;
 }
-.menu {width: 20%;}
 
-
-p {
-  font-optical-sizing: auto;
-  font-size: 18px;
-}
-
-li {
+p,li {
   font-optical-sizing: auto;
   font-size: 18px;
 }
@@ -71,20 +67,31 @@ h3 {
   font-size: 20px;
 }
 
-#a_w{
+#a_s{
   display: flex;
   width: 100%;
 }
 
-
-.about {
+.about,.skill {
   text-align: center;
   display: block;
-  margin: 50px 50px 50px 10px;
-  width: 40%;
+  margin: 10px auto;
+  width: 50%;
 }
 
+.skill  h2 ,.skill_2 h3{
+  text-align: center;
+}
+
+.skill_1 {
+  display: flex;
+  text-align: center;
+  margin: 10px auto;
+}
+.skill_2{width: 50%;}
+
 .pro{
+  margin-left: 25%;
   text-align: left;
 }
 
@@ -92,7 +99,6 @@ h3 {
   text-align: center;
   display: block;
   margin: 50px auto ;
-  width: 60%;
 }
 
 .workview{
@@ -106,7 +112,7 @@ h3 {
 }
 
 #contact{
-  margin: 25px;
+  text-align: center ;
 }
 
   @media (max-width: 767px) {
@@ -128,25 +134,61 @@ h3 {
 
   }
 
-.mail{
-  height: 40px;
-  width: 250px;
-  border-color: #fff;
-  border-width: 1px;
-  background-color: #000;
-  color: #fff;
+.c_f{
+  margin: 5px auto 100px auto;
+  border: double #fff;
+  align-items: center; /* 上下中央寄せ */
+  display: flex; /* Flexboxを適用 */
+  justify-content: center; /* 左右中央寄せ */
+  height: 50px;
+  width: 150px;
 }
-.mail_c{
-  height: 200px;
-  width: 250px;
-  border-color: #fff;
-  border-radius: 0;
-  background-color: #000;
-  color: #fff;
+
+.c_f a:hover {color: #000;}
+.c_f:hover {
+  border: double #000;
+  background-color: #fff;
 }
 
 footer {
   color: #fff;
   background-color: dimgray;
   text-align: center;
+}
+
+
+/*下からフェードイン*/
+.fadein_b {
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein-bottom {
+  0% {
+     opacity: 0;
+     transform: translateY(20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+
+@keyframes scroll {
+  from {
+    opacity: 0;
+    scale: 0.9;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.fadein_a {
+  animation: scroll linear;
+  animation-timeline: view();
+  animation-range: entry 0% contain 20%;
 }
