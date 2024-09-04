@@ -1,32 +1,58 @@
+@charset "UTF-8";
 body {
   padding: 0px;
   margin: 0px;
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   background-color: #000;
-  color: #fff;
 }
 
 /*リンクの装飾*/
-a:link {color: #fff;}
-a:visited {color: #fff;}
-a {text-decoration-line:none;}
-a:active {color: #fff;}
-a:hover {color: #000;}
+a:link {
+  color: #fff;
+}
+
+a:visited {
+  color: #fff;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+a:active {
+  color: #fff;
+}
+
+a:hover {
+  color: #000;
+}
 
 .menu {
   width: 20%;
 }
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
 
-.menu-b,.c_f{
+p {
+  color: red;
+}
+@media screen and (max-width: 767px) {
+  p {
+    color: green;
+  }
+}
+
+/*メニューボタンアニメーション*/
+.menu-b {
   text-align: right;
   background-color: #000;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all  0.3s ease;
-  }
-.menu-b p{
+  transition: all 0.3s ease;
+}
+.menu-b p {
   font-size: 4vw;
   font-weight: bold;
   margin: 0;
@@ -35,21 +61,28 @@ a:hover {color: #000;}
 .menu-b:hover {
   background-color: #fff;
 }
-.top{
+
+/*ここまで*/
+.top {
   display: flex;
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .top {
+    display: block;
+  }
+}
 
-.topimg{
+.topimg {
   width: 80%;
 }
 
-#MyProfile{
+#MyProfile {
   width: 100%;
   height: 100%;
 }
 
-p,li {
+p, li {
   font-optical-sizing: auto;
   font-size: 18px;
 }
@@ -67,19 +100,19 @@ h3 {
   font-size: 20px;
 }
 
-#a_s{
+#a_s {
   display: flex;
   width: 100%;
 }
 
-.about,.skill {
+.about, .skill {
   text-align: center;
   display: block;
   margin: 10px auto;
   width: 50%;
 }
 
-.skill  h2 ,.skill_2 h3{
+.skill h2, .skill_2 h3 {
   text-align: center;
 }
 
@@ -88,9 +121,12 @@ h3 {
   text-align: center;
   margin: 10px auto;
 }
-.skill_2{width: 50%;}
 
-.pro{
+.skill_2 {
+  width: 50%;
+}
+
+.pro {
   margin-left: 25%;
   text-align: left;
 }
@@ -98,56 +134,21 @@ h3 {
 .works {
   text-align: center;
   display: block;
-  margin: 50px auto ;
+  margin: 50px auto;
 }
 
-.workview{
+.workview {
   display: flex;
-  margin: 50px auto ;
+  margin: 50px auto;
 }
 
-.workview div{
+.workview div {
   width: 33%;
   margin: 5px;
 }
 
-#contact{
-  text-align: center ;
-}
-
-  @media (max-width: 767px) {
-    #a_w{
-      display: block;
-      width: 100%;
-    }
-    .about {
-      margin: 10px;
-      width: 100%;
-    }
-    .works {
-      margin: 10px ;
-      width: 100%;
-    }
-    .pro{
-      margin: 0px 20% 0px 20%;
-    }
-
-  }
-
-.c_f{
-  margin: 5px auto 100px auto;
-  border: double #fff;
-  align-items: center; /* 上下中央寄せ */
-  display: flex; /* Flexboxを適用 */
-  justify-content: center; /* 左右中央寄せ */
-  height: 50px;
-  width: 150px;
-}
-
-.c_f a:hover {color: #000;}
-.c_f:hover {
-  border: double #000;
-  background-color: #fff;
+#contact {
+  text-align: center;
 }
 
 footer {
@@ -155,7 +156,6 @@ footer {
   background-color: dimgray;
   text-align: center;
 }
-
 
 /*下からフェードイン*/
 .fadein_b {
@@ -165,17 +165,17 @@ footer {
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
+
 @keyframes fadein-bottom {
   0% {
-     opacity: 0;
-     transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100% {
-     opacity: 1;
-     transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
 @keyframes scroll {
   from {
     opacity: 0;
@@ -186,9 +186,51 @@ footer {
     scale: 1;
   }
 }
-
 .fadein_a {
   animation: scroll linear;
   animation-timeline: view();
   animation-range: entry 0% contain 20%;
 }
+
+/*コンタクトフォーム*/
+.mail_b a {
+  background: #fff;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 280px;
+  padding: 10px 25px;
+  color: #000;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.mail_b a:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 2rem;
+  font-size: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s;
+  width: 6px;
+  height: 6px;
+  border-top: solid 2px currentColor;
+  border-right: solid 2px currentColor;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.mail_b a:hover {
+  background: #000;
+  color: #FFF;
+}
+
+.mail_b a:hover:after {
+  right: 1.4rem;
+}/*# sourceMappingURL=style.css.map */

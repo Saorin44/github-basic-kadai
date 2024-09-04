@@ -1,0 +1,234 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #000;
+  color: #fff;
+}
+
+/*リンクの装飾*/
+a:link {color: #fff;}
+a:visited {color: #fff;}
+a {text-decoration-line:none;}
+a:active {color: #fff;}
+a:hover {color: #000;}
+
+.menu {
+  width: 20%;
+  @media screen and (max-width: 767px) {
+    display: none;
+    width: 0%;
+ }
+}
+
+/*メニューボタンアニメーション*/
+.menu-b{
+  text-align: right;
+  background-color: #000;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all  0.3s ease;
+  p{
+    font-size: 4vw;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.menu-b:hover {
+  background-color: #fff;
+}
+/*ここまで*/
+
+.top{
+  display: flex;
+  width: 100%;
+  @media screen and (max-width: 767px) {
+    display: block;
+ }
+}
+
+.topimg{
+  width: 80%;
+  @media screen and (max-width: 767px) {
+    display: block;
+    width: 100%;
+ }
+}
+
+#MyProfile{
+  width: 100%;
+  height: 100%;
+}
+
+p,li {
+  font-optical-sizing: auto;
+  font-size: 18px;
+}
+
+h2 {
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-size: 35px;
+}
+
+h3 {
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 20px;
+}
+
+#a_s{
+  display: flex;
+  width: 100%;
+    @media screen and (max-width: 767px) {
+      display: block;
+   }
+}
+
+.about,.skill {
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+  width: 50%;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+   }
+}
+
+.skill h2{
+  text-align: center;
+}
+
+.skill_1 {
+  display: flex;
+  text-align: center;
+  margin: 10px auto;
+}
+.skill_2{
+  width: 50%;
+    h3{text-align: center;}
+}
+
+.pro{
+  margin-left: 25%;
+  text-align: left;
+  @media screen and (max-width: 767px) {
+    margin: auto;
+ }
+}
+
+.works {
+  text-align: center;
+  display: block;
+  margin: 50px auto ;
+}
+
+.workview{
+  display: flex;
+  margin: 50px auto ;
+  @media screen and (max-width: 767px) {
+    display: block;
+ }
+}
+
+.workview div{
+  width: 33%;
+  margin: 5px;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+ }
+}
+
+#contact{
+  text-align: center ;
+}
+
+
+footer {
+  color: #fff;
+  background-color: dimgray;
+  text-align: center;
+}
+
+
+/*下からフェードイン*/
+.fadein_b {
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein-bottom {
+  0% {
+     opacity: 0;
+     transform: translateY(20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+
+@keyframes scroll {
+  from {
+    opacity: 0;
+    scale: 0.9;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.fadein_a {
+  animation: scroll linear;
+  animation-timeline: view();
+  animation-range: entry 0% contain 20%;
+}
+
+/*コンタクトフォームアニメーション*/
+.mail_b a {
+  background: #fff;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 280px;
+  padding: 10px 25px;
+  color: #000;
+  transition: 0.3s ease-in-out;
+  font-weight: 500;
+}
+.mail_b a:after {
+content: "";
+position: absolute;
+top: 50%;
+bottom: 0;
+right: 2rem;
+font-size: 90%;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: right 0.3s;
+width: 6px;
+height: 6px;
+border-top: solid 2px currentColor;
+border-right: solid 2px currentColor;
+transform: translateY(-50%) rotate(45deg);
+}
+.mail_b a:hover {
+background: #000;
+color: #FFF;
+}
+.mail_b a:hover:after {
+right: 1.4rem;
+}
+
+
